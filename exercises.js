@@ -68,7 +68,11 @@ function countAll(arr) {
  * @param {Array}
  * @return {Array}
  */
-var countStrings;
+function countStrings(arr) {
+   var sum = arr.map(arr => arr.length);
+   return sum;
+   }
+
 
 /* #countAllStrings
  *
@@ -77,7 +81,12 @@ var countStrings;
  * @param {String}
  * @return {Number}
  */
-var countAllStrings;
+function countAllStrings(string) {
+  var sum = string.map(string => string.length); //array of string lengths
+  var result = sum.reduce((acc, cur) => acc + cur);
+  return result;
+
+}
 
 /* #convertToArray
  *
@@ -86,7 +95,11 @@ var countAllStrings;
  * @param {Object}
  * @return {Array}
  */
-var convertToArray;
+function convertToArray(object) {
+  var result = Object.values(object);
+  return result;
+
+}
 
 /* #objectSize
  *
@@ -95,7 +108,10 @@ var convertToArray;
  * @param {Object}
  * @return {Number}
  */
-var objectSize;
+function objectSize(object) {
+  var count = Object.values(object);
+  return count.length;
+}
 
 /* #createZeroFilledArray
  *
@@ -104,7 +120,13 @@ var objectSize;
  * @param {Number}
  * @return {Zero}
  */
-var createZeroFilledArray;
+function createZeroFilledArray(number) {
+  var arr = Array.of(number); //creating array for param 
+  var newArr = arr.fill(0);
+  return arr.push(newArr);
+ 
+  
+}
 
 /* #poppedArray
  *
@@ -113,7 +135,10 @@ var createZeroFilledArray;
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+function poppedArray (arr) {
+  arr.pop();
+  return arr;
+}
 
 /* #splitString
  *
@@ -122,7 +147,11 @@ var poppedArray;
  * @param {String}
  * @return {Array}
  */
-var splitString;
+function splitString(String) {
+  var newArr = [];
+  newArr.forEach((String) => ({String}));
+  return newArr;
+}
 
 /* #lengthOfLast
  *
