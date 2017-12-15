@@ -148,9 +148,8 @@ function poppedArray (arr) {
  * @return {Array}
  */
 function splitString(String) {
-  var newArr = [];
-  newArr.forEach((String) => ({String}));
-  return newArr;
+  var Arr = String.split("");
+  return Arr;
 }
 
 /* #lengthOfLast
@@ -160,7 +159,10 @@ function splitString(String) {
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+function lengthOfLast(String) {
+  var last = String.pop();
+  return last.length
+}
 
 /* #sumBelowTen
  *
@@ -169,7 +171,10 @@ var lengthOfLast;
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+function sumBelowTen(arr) {
+   var sum = arr.reduce((acc, cur) => acc + (cur < 10));
+ return sum;
+}
 
 /* #moreThanTenLetters
  *
@@ -178,8 +183,12 @@ var sumBelowTen;
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
-
+function moreThanTenLetters(String) {
+  var String = [];
+var moreTen = String.map(function(num){
+  return num > 10;
+}); return moreTen.length;
+}
 /* #multiplyAll
  *
  * Takes in an array of numbers and returns the product of all elements.
@@ -187,7 +196,9 @@ var moreThanTenLetters;
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+function multiplyAll(arr) {
+  return arr.reduce((acc, cur) => acc * cur);
+}
 
 /* #getKeys
  *
@@ -196,7 +207,10 @@ var multiplyAll;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+function getKeys(Obj) {
+  var result = Object.keys(Obj);
+  return result;
+}
 
 /* #sumAllPositive
  *
@@ -205,7 +219,9 @@ var getKeys;
  * @param {String}
  * @return {Number}
  */
-var sumAllPositive;
+function sumAllPositive(str) {
+
+}
 
 /* #stringCountBelowThree
  *
@@ -223,7 +239,8 @@ var stringCountBelowThree;
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+function countObjects(array) {
+  return array.length; }
 
 /* #getObjectKeys
  *
@@ -232,7 +249,9 @@ var countObjects;
  * @param {Object}
  * @return {Array}
  */
-var getObjectKeys;
+function getObjectKeys(obj) {
+  return Object.keys(obj);
+}
 
 /* #getObjectValues
  *
@@ -241,7 +260,9 @@ var getObjectKeys;
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+function getObjectValues(obj) {
+  return Object.values(obj);
+}
 
 /* #makeObject
  *
@@ -251,7 +272,10 @@ var getObjectValues;
  * @param {String}
  * @return {Object}
  */
-var makeObject;
+function makeObject(str1, str2) {
+  var newObj = {[str1] : str2};
+  return newObj;
+}
 
 /* #makeObjectReverse
  *
@@ -261,7 +285,10 @@ var makeObject;
  * @param {String}
  * @return {Bool}
  */
-var makeObjectReverse;
+function makeObjectReverse(str1, str2) {
+  var newObj = {[str2] : str1};
+  return newObj;
+}
 
 /* #tupleToObject
  *
