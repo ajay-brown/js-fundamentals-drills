@@ -121,12 +121,15 @@ function objectSize(object) {
  * @return {Zero}
  */
 function createZeroFilledArray(number) {
-  var arr = Array.of(number); //creating array for param 
-  var newArr = arr.fill(0);
-  return arr.push(newArr);
+var arr = []; //create array
+for (var i=0; i<number; i++){ //iterate through on number, add 0s
+  arr.push(0);
+}
+return arr;
+}
  
   
-}
+
 
 /* #poppedArray
  *
@@ -172,8 +175,13 @@ function lengthOfLast(String) {
  * @return {Number}
  */
 function sumBelowTen(arr) {
-   var sum = arr.reduce((acc, cur) => acc + (cur < 10));
- return sum;
+   var sum; //declare var
+   for (i = 0; i < arr.length;i++) { 
+    if(arr[i]<10) {
+ sum += arr[i]; //add to arr
+    }
+   }
+   return sum;
 }
 
 /* #moreThanTenLetters
@@ -183,11 +191,13 @@ function sumBelowTen(arr) {
  * @param {String}
  * @return {Number}
  */
-function moreThanTenLetters(String) {
-  var String = [];
-var moreTen = String.map(function(num){
-  return num > 10;
-}); return moreTen.length;
+function moreThanTenLetters(str) {
+  var moreTen = [];
+for (var i = 0; i < str.length; i++) {
+  if(str[i].length > 10)
+    moreTen++
+}
+return moreTen;
 }
 /* #multiplyAll
  *
@@ -220,7 +230,12 @@ function getKeys(Obj) {
  * @return {Number}
  */
 function sumAllPositive(str) {
-
+ var sum;
+ for (var i = 0;i<arr.lenth; i++){
+  if (arr[i] >= 0)
+    sum +=arr[i];
+ }
+ return sum;
 }
 
 /* #stringCountBelowThree
@@ -230,7 +245,14 @@ function sumAllPositive(str) {
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree;
+function stringCountBelowThree(arr) {
+  var count;
+  for (i=0; i<arr.length; i++) {
+    if (arr[i].length <= 3 ) 
+      count++;
+  }
+  return count;
+}
 
 /* #countObjects
  *
@@ -297,7 +319,9 @@ function makeObjectReverse(str1, str2) {
  * @param {Array}
  * @return {Object}
  */
-var tupleToObject;
+function tupleToObject(arr) {
+  var newObj 
+}
 
 /* #tupleToObjectReverse
  *
