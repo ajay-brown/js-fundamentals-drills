@@ -400,12 +400,12 @@ function getKeys(obj) {
 function objectToArray(obj) {
   var arr = [];
   for (key in obj) {
-    key = 0;
-    arr.push;
+    key === 0;
+    arr.push(obj);
   }
   for (val in obj) {
-    val = 1;
-    arr.push;
+    val === 1;
+    arr.push(obj);
   }
 return arr;
 }
@@ -458,6 +458,11 @@ function objectsToTuples(obj1, obj2) {
   for (key in obj1) {
     tup1.push(obj1)
   };
+  for (key in obj2) {
+    tup2.push(obj2);
+  }
+  var arr = tup1.concat(tup2);
+  return arr;
 }
 
 /* #mapArrayValues
@@ -541,14 +546,13 @@ function stringToKeys(str) {
  */
 function charCountMap(arr) {
   var newObj = {};
-  var count = 0;
+  
   for (var i = 0; i<arr.length; i++) {
-    var count = newObj[arr[i]].length; //find char count
-    newObj[arr[i]] = count;
-  }
-  return newObj;
-}
+   newObj[arr[i]] = arr[i].length;
 
+}
+return newObj;
+}
 /* #frequencyMap
  *
  * takes in an array of strings and returns an object with the string as the key and the number of occurences as the value.
@@ -571,7 +575,14 @@ for (var i=0; i < arr.length; i++) {
  * @param {String}
  * @return {Bool}
  */
-var tupleConvertToObject;
+function tupleConvertToObject(arr) {
+ var newObj = {};
+  for (var i = 0; i < arr.length; i++) {
+    newObj[arr[i][0]] = arr[i][1];
+
+  }
+return newObj;
+}
 
 
 module.exports = {
