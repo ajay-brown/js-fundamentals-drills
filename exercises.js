@@ -563,8 +563,14 @@ return newObj;
 function frequencyMap(arr) {
   var newObj = {};
 for (var i=0; i < arr.length; i++) {
-  
+
+  if(result.hasOwnProperty(arr[i])) {
+newObj[arr[i]]++
+  } else {
+    newObj[arr[i]] = 1; //create new key value adding to new object
+  }
 }
+return newObj;
 }
 
 /* #tupleConvertToObject
