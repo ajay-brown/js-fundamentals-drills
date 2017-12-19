@@ -5,14 +5,14 @@
  * @param {Array} // [1,2,3]
  * @return {Array} // [2,4,6]
  */
-var doubleArray = function(arr) {
-  var result = [];
-  for (var i = 0; i < arr.length; i++) {
-    result.push(arr[i] * 2) 
-  }
-  return result
-}
 
+function doubleArray(arr) {
+  var double = [];
+   for (var i=0; i<arr.length;i++) {
+    double.push(arr[i] * 2);
+   }
+   return double;
+}
 /* #sumArrays
  *
  * Takes in two arrays of numbers and returns the sum of both arrays.
@@ -21,7 +21,17 @@ var doubleArray = function(arr) {
  * @param {Array}
  * @return {Bool}
  */
-var sumArrays;
+function sumArrays(arr1,arr2) {
+  var sum1 = 0;;
+  var sum2 = 0;
+  for (var i =0; i<arr1.length; i++) {
+ sum1 += arr1[i];
+  };
+   for (var i =0; i<arr2.length; i++) {
+    sum2 += arr2[i];
+  };
+  return sum1 + sum2;
+};
 
 /* #stringCount
  *
@@ -30,8 +40,10 @@ var sumArrays;
  * @param {String}
  * @return {Number}
  */
-var stringCount;
 
+function stringCount(string) {
+ return string.length;
+}
 /* #arrayLength
  *
  * Takes in an array and returns the length of the array.
@@ -39,7 +51,10 @@ var stringCount;
  * @param {String}
  * @return {Number}
  */
-var arrayLength;
+
+function arrayLength(string){
+return string.length;
+}
 
 /* #countAll
  *
@@ -48,7 +63,13 @@ var arrayLength;
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+function countAll(arr) {
+  var sum = 0;
+  for (var i=0; i<arr.length; i++) {
+    sum += arr[i];
+  }
+ return sum;
+}
 
 /* #countStrings
  *
@@ -57,7 +78,13 @@ var countAll;
  * @param {Array}
  * @return {Array}
  */
-var countStrings;
+function countStrings(arr) {
+  var stringLength = [];
+  for (var i=0; i<arr.length; i++) {
+ stringLength.push(arr[i].length); //for every "length, push to stringLength arr
+  }
+return stringLength;
+}
 
 /* #countAllStrings
  *
@@ -66,7 +93,13 @@ var countStrings;
  * @param {String}
  * @return {Number}
  */
-var countAllStrings;
+function countAllStrings(arr) {
+  var sum = 0;
+  for (var i=0; i <arr.length;i++) {
+    sum += arr[i].length;
+  }
+return sum;
+}
 
 /* #convertToArray
  *
@@ -75,7 +108,11 @@ var countAllStrings;
  * @param {Object}
  * @return {Array}
  */
-var convertToArray;
+function convertToArray(object) {
+  var result = Object.values(object);
+  return result;
+
+}
 
 /* #objectSize
  *
@@ -84,7 +121,10 @@ var convertToArray;
  * @param {Object}
  * @return {Number}
  */
-var objectSize;
+function objectSize(object) {
+  var count = Object.values(object);
+  return count.length;
+}
 
 /* #createZeroFilledArray
  *
@@ -93,7 +133,16 @@ var objectSize;
  * @param {Number}
  * @return {Zero}
  */
-var createZeroFilledArray;
+function createZeroFilledArray(number) {
+var arr = []; //create array
+for (var i=0; i<number; i++){ //iterate through on number, add 0s
+  arr.push(0);
+}
+return arr;
+}
+ 
+  
+
 
 /* #poppedArray
  *
@@ -102,7 +151,10 @@ var createZeroFilledArray;
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+function poppedArray (arr) {
+  arr.pop();
+  return arr;
+}
 
 /* #splitString
  *
@@ -111,7 +163,10 @@ var poppedArray;
  * @param {String}
  * @return {Array}
  */
-var splitString;
+function splitString(String) {
+  var Arr = String.split("");
+  return Arr;
+}
 
 /* #lengthOfLast
  *
@@ -120,7 +175,10 @@ var splitString;
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+function lengthOfLast(String) {
+  var last = String.pop();
+  return last.length
+}
 
 /* #sumBelowTen
  *
@@ -129,7 +187,15 @@ var lengthOfLast;
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+function sumBelowTen(arr) {
+   var sum = 0;
+   for (var i = 0; i < arr.length;i++) { 
+    if(arr[i] <= 10) {
+ sum += arr[i]; //add to arr
+    }
+   }
+   return sum;
+}
 
 /* #moreThanTenLetters
  *
@@ -138,8 +204,14 @@ var sumBelowTen;
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
-
+function moreThanTenLetters(str) {
+  var moreTen = [];
+for (var i = 0; i < str.length; i++) {
+  if(str[i].length > 10)
+    moreTen++
+}
+return moreTen;
+}
 /* #multiplyAll
  *
  * Takes in an array of numbers and returns the product of all elements.
@@ -147,7 +219,9 @@ var moreThanTenLetters;
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+function multiplyAll(arr) {
+  return arr.reduce((acc, cur) => acc * cur);
+}
 
 /* #getKeys
  *
@@ -156,7 +230,10 @@ var multiplyAll;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+function getKeys(Obj) {
+  var result = Object.keys(Obj);
+  return result;
+}
 
 /* #sumAllPositive
  *
@@ -165,7 +242,16 @@ var getKeys;
  * @param {String}
  * @return {Number}
  */
-var sumAllPositive;
+function sumAllPositive(str) {
+ var sum = 0;
+ for (var i = 0;i<str.length; i++){
+  if (str[i] > 0) {
+    sum +=str[i];
+  
+}
+ }
+ return sum;
+}
 
 /* #stringCountBelowThree
  *
@@ -174,7 +260,14 @@ var sumAllPositive;
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree;
+function stringCountBelowThree(arr) {
+  var count = 0;
+  for (var i=0; i<arr.length; i++) {
+    if (arr[i].length <= 3 ) 
+      count++;
+  }
+  return count;
+}
 
 /* #countObjects
  *
@@ -183,7 +276,8 @@ var stringCountBelowThree;
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+function countObjects(array) {
+  return array.length; }
 
 /* #getObjectKeys
  *
@@ -192,7 +286,9 @@ var countObjects;
  * @param {Object}
  * @return {Array}
  */
-var getObjectKeys;
+function getObjectKeys(obj) {
+  return Object.keys(obj);
+}
 
 /* #getObjectValues
  *
@@ -201,7 +297,9 @@ var getObjectKeys;
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+function getObjectValues(obj) {
+  return Object.values(obj);
+}
 
 /* #makeObject
  *
@@ -211,7 +309,10 @@ var getObjectValues;
  * @param {String}
  * @return {Object}
  */
-var makeObject;
+function makeObject(str1, str2) {
+  var newObj = {[str1] : str2};
+  return newObj;
+}
 
 /* #makeObjectReverse
  *
@@ -221,7 +322,10 @@ var makeObject;
  * @param {String}
  * @return {Bool}
  */
-var makeObjectReverse;
+function makeObjectReverse(str1, str2) {
+  var newObj = {[str2] : str1};
+  return newObj;
+}
 
 /* #tupleToObject
  *
@@ -230,7 +334,10 @@ var makeObjectReverse;
  * @param {Array}
  * @return {Object}
  */
-var tupleToObject;
+function tupleToObject(arr) {
+  var newObj = {[arr[0]] : arr[1]}
+  return newObj; 
+}
 
 /* #tupleToObjectReverse
  *
@@ -239,7 +346,10 @@ var tupleToObject;
  * @param {Array}
  * @return {Object}
  */
-var tupleToObjectReverse;
+function tupleToObjectReverse(arr) {
+  var newObj = {[arr[1]] : arr[0]};
+  return newObj;
+}
 
 /* #strToKeys
  *
@@ -248,7 +358,13 @@ var tupleToObjectReverse;
  * @param {Array}
  * @return {Object}
  */
-var strToKeys;
+function strToKeys(arr) {
+  var newObj = {};
+  for (var i = 0; i < arr.length; i++) {
+    newObj[arr[i]] = 0;
+  }
+  return newObj;
+}
 
 /* #getValues
  *
@@ -257,7 +373,10 @@ var strToKeys;
  * @param {Object}
  * @return {Array}
  */
-var getValues;
+function getValues(arr) {
+  return Object.values(arr);
+
+}
 
 /* #getKeys
  *
@@ -266,7 +385,9 @@ var getValues;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+function getKeys(obj) {
+  return Object.keys(obj);
+}
 
 /* #objectToArray
  *
@@ -276,7 +397,11 @@ var getKeys;
  * @param {Object}
  * @return {Array}
  */
-var objectToArray;
+function objectToArray(obj) {
+
+  return Object.entries(obj);
+
+}
 
 /* #arrayToObject
  *
@@ -286,7 +411,13 @@ var objectToArray;
  * @param {Array}
  * @return {Object}
  */
-var arrayToObject;
+function arrayToObject(arr) {
+ var newObj = {};
+ for (var i=0; i < arr.length; i++) {
+    newObj[arr[i]] = false;
+ }
+ return newObj;
+}
 
 /* #arraysToObject
  *
@@ -297,7 +428,13 @@ var arrayToObject;
  * @param {Array}
  * @return {Object}
  */
-var arraysToObject;
+function arraysToObject(arr1, arr2) {
+  var newObj = {};
+  for (var i = 0; i < arr1.length; i++) {
+    newObj[arr1[i]] = arr2[i];
+  }
+  return newObj;
+}
 
 /* #objectsToTuples
  *
@@ -307,7 +444,13 @@ var arraysToObject;
  * @param {Object}
  * @return {Array}
  */
-var objectsToTuples;
+function objectsToTuples(obj1, obj2) {
+  var tup1 = Object.entries(obj1);
+  var tup2 = Object.entries(obj2);
+  
+var arr = tup1.concat(tup2);
+return arr;
+}
 
 /* #mapArrayValues
  *
@@ -316,7 +459,13 @@ var objectsToTuples;
  * @param {Array}
  * @return {Object}
  */
-var mapArrayValues;
+function mapArrayValues(arr) {
+  var newObj = {};
+  for (var i=0; i < arr.length; i++) {
+    newObj[arr[i]] = true;
+  }
+  return newObj;
+}
 
 /* #mapStringCounts
  *
@@ -327,7 +476,17 @@ var mapArrayValues;
  * @param {Array}
  * @return {Object}
  */
-var mapStringCounts;
+function mapStringCounts(arr) {
+  var newObj = {};
+  for (var i=0; i < arr.length; i++) {
+    
+    if (arr[i].length >= 5) {
+      newObj[arr[i]] = true;
+     } else { newObj[arr[i]] = false;
+  }
+}
+  return newObj;
+}
 
 /* #arrayToObjectNums
  *
@@ -337,7 +496,13 @@ var mapStringCounts;
  * @param {Array}
  * @return {Object}
  */
-var arrayToObjectNums;
+ function arrayToObjectNums(arr) {
+  var newObj = {};
+  for (var i=0; i < arr.length; i++ ){
+    newObj[arr[i]] = true;
+  }
+  return newObj;
+ }
 
 /* #stringToKeys
  *
@@ -346,7 +511,17 @@ var arrayToObjectNums;
  * @param {String}
  * @return {Object}
  */
-var stringToKeys;
+
+
+
+function stringToKeys(str) {
+  var result = {};
+  var splitted = str.split("");
+  for (var i =0; i< splitted.length; i++) { //iteration, acess to each letter
+    result[splitted[i]] = true; //create object "result" with all letters in i are true
+  }
+  return result;
+}
 
 /* #charCountMap
  *
@@ -356,8 +531,15 @@ var stringToKeys;
  * @param {Array}
  * @return {Object}
  */
-var charCountMap;
+function charCountMap(arr) {
+  var newObj = {};
+  
+  for (var i = 0; i<arr.length; i++) {
+   newObj[arr[i]] = arr[i].length;
 
+}
+return newObj;
+}
 /* #frequencyMap
  *
  * takes in an array of strings and returns an object with the string as the key and the number of occurences as the value.
@@ -365,7 +547,17 @@ var charCountMap;
  * @param {String}
  * @return {Bool}
  */
-var frequencyMap;
+function frequencyMap(arr) {
+  var newObj = {};
+for (var i=0; i < arr.length; i++) {
+    if (newObj.hasOwnProperty(arr[i])) {
+      newObj[arr[i]]++;
+    } else {
+      newObj[arr[i]] = 1;
+    }
+}
+return newObj;
+}
 
 /* #tupleConvertToObject
  *
@@ -375,48 +567,55 @@ var frequencyMap;
  * @param {String}
  * @return {Bool}
  */
-var tupleConvertToObject;
+function tupleConvertToObject(arr) {
+ var newObj = {};
+  for (var i = 0; i < arr.length; i++) {
+    newObj[arr[i][0]] = arr[i][1];
+
+  }
+return newObj;
+}
 
 
 module.exports = {
-  doubleArray: null,
-  sumArrays: null, 
-  stringCount: null,
-  arrayLength: null,
-  countAll: null,
-  countStrings: null,
-  countAllStrings: null,
-  convertToArray: null,
-  objectSize: null,
-  createZeroFilledArray: null,
-  poppedArray: null,
-  splitString: null,
-  lengthOfLast: null,
-  sumBelowTen: null,
-  moreThanTenLetters: null,
-  multiplyAll: null,
-  getKeys: null,
-  sumAllPositive: null,
-  stringCountBelowThree: null,
-  countObjects: null,
-  getObjectKeys: null,
-  getObjectValues: null,
-  makeObject: null,
-  makeObjectReverse: null,
-  tupleToObject: null,
-  tupleToObjectReverse: null,
-  strToKeys: null,
-  getValues: null,
-  getKeys: null,
-  objectToArray: null,
-  arrayToObject: null,
-  arraysToObject: null,
-  objectsToTuples: null,
-  mapArrayValues: null,
-  mapStringCounts: null,
-  arrayToObjectNums: null,
-  stringToKeys: null,
-  charCountMap: null,
-  frequencyMap: null,
-  tupleConvertToObject: null
+  doubleArray: doubleArray,
+  sumArrays: sumArrays, 
+  stringCount: stringCount,
+  arrayLength: arrayLength,
+  countAll: countAll,
+  countStrings: countStrings,
+  countAllStrings: countAllStrings,
+  convertToArray: convertToArray,
+  objectSize: objectSize,
+  createZeroFilledArray: createZeroFilledArray,
+  poppedArray: poppedArray,
+  splitString: splitString,
+  lengthOfLast: lengthOfLast,
+  sumBelowTen: sumBelowTen,
+  moreThanTenLetters: moreThanTenLetters,
+  multiplyAll: multiplyAll,
+  getKeys: getKeys,
+  sumAllPositive: sumAllPositive,
+  stringCountBelowThree: stringCountBelowThree,
+  countObjects: countObjects,
+  getObjectKeys: getObjectKeys,
+  getObjectValues: getObjectValues,
+  makeObject: makeObject,
+  makeObjectReverse: makeObjectReverse,
+  tupleToObject: tupleToObject,
+  tupleToObjectReverse: tupleToObjectReverse,
+  strToKeys: strToKeys,
+  getValues: getValues,
+  getKeys: getKeys,
+  objectToArray: objectToArray,
+  arrayToObject: arrayToObject,
+  arraysToObject: arraysToObject,
+  objectsToTuples: objectsToTuples,
+  mapArrayValues: mapArrayValues,
+  mapStringCounts: mapStringCounts,
+  arrayToObjectNums: arrayToObjectNums,
+  stringToKeys: stringToKeys,
+  charCountMap: charCountMap,
+  frequencyMap: frequencyMap,
+  tupleConvertToObject: tupleConvertToObject
 }
