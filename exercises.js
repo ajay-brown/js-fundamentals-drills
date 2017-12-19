@@ -398,16 +398,9 @@ function getKeys(obj) {
  * @return {Array}
  */
 function objectToArray(obj) {
-  var arr = [];
-  for (key in obj) {
-    key === 0;
-    arr.push(obj);
-  }
-  for (val in obj) {
-    val === 1;
-    arr.push(obj);
-  }
-return arr;
+
+  return Object.entries(obj);
+
 }
 
 /* #arrayToObject
@@ -452,17 +445,11 @@ function arraysToObject(arr1, arr2) {
  * @return {Array}
  */
 function objectsToTuples(obj1, obj2) {
-  var arr = [];
-  var tup1 = [];
-  var tup2 = [];
-  for (key in obj1) {
-    tup1.push(obj1)
-  };
-  for (key in obj2) {
-    tup2.push(obj2);
-  }
-  var arr = tup1.concat(tup2);
-  return arr;
+  var tup1 = Object.entries(obj1);
+  var tup2 = Object.entries(obj2);
+  
+var arr = tup1.concat(tup2);
+return arr;
 }
 
 /* #mapArrayValues
@@ -563,8 +550,13 @@ return newObj;
 function frequencyMap(arr) {
   var newObj = {};
 for (var i=0; i < arr.length; i++) {
-  
+    if (newObj.hasOwnProperty(arr[i])) {
+      newObj[arr[i]]++;
+    } else {
+      newObj[arr[i]] = 1;
+    }
 }
+return newObj;
 }
 
 /* #tupleConvertToObject
